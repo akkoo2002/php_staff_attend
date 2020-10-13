@@ -1,6 +1,6 @@
 
     <nav class="navbar navbar-dark sticky-top bg-dark flex-md-nowrap p-0">
-      <a class="navbar-brand col-sm-3 col-md-2 mr-0" href="#">Company name</a>
+      <a class="navbar-brand col-sm-3 col-md-2 mr-0" href="#">Your Company</a>
       <ul class="nav justify-content-end">
           <?php
             if(isset($_SESSION["userid"])){

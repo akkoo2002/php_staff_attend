@@ -1,7 +1,7 @@
 <?php include "header.php"  ?>
     <link href="src/css/signin.css" rel="stylesheet">
     <?php
-        for ($x = -5; $x <= 5; $x++) {
+        for ($x = -5; $x <= 0; $x++) {
             $timestamp = time()+(60*60*5.5)+((60*60*24)*$x);
             $date = date('Y-m-d', $timestamp);
             echo "  <a class='badge badge-primary' href='applyattendence.php?date=".$date."'>";

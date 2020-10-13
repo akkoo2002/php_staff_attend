@@ -39,7 +39,7 @@
         <meta name="description" content="">
         <meta name="author" content="">
 
-        <title>Dashboard Template for Bootstrap</title>
+        <title>Attendance Portal</title>
 
         <link href="src/css/site.css" rel="stylesheet">
         <link href="src/css/bootstrap/bootstrap.css" rel="stylesheet">

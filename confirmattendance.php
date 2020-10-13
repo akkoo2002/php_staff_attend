@@ -21,7 +21,7 @@
         require_once "includes/functions.inc.php";
         $records = getAllPendingAttendance($conn);
         foreach($records as $rec){
-            $date = strtotime($rec['att_time']); 
+            $date = strtotime($rec['att_time'])+((60*60)*5.5);  
             $hour =floatval( number_format(date("H",$date)));
             $minute = floatval(number_format(date("m",$date)));
             $time = $hour+($minute/60);
