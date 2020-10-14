@@ -52,16 +52,17 @@
 <div class="bg"></div>
 <div class="bg bg2"></div>
 <div class="bg bg3"></div>
-    <h1>Welcome:</h1>
+    <h1>Welcome to:</h1>
     <h2>Staff Attendance portal</h2>
+    <hr/>
     <br><br>
-    <h3>in this poratal you administrator can </h3>
+    <h3>In this poratal administrator can </h3>
     Add new staff with user id and password
     <br> Will confirm the staff attendance applied
     <br> can see the monthly report for attendance
     <br><br>
     <br><br>
-    <h3>in this poratal you Staff can </h3>
+    <h3>In this poratal staff can </h3>
     Login to the portal with id created by admin
     <br> and apply for his attendance to be approved by admin
 

@@ -4,6 +4,18 @@
     $requestUri = $_SERVER['REQUEST_URI'];
     $requestUri = str_replace("/demo","",$requestUri);
 
+    if($requestUri==="/adminhome.php" ){
+        if(isset($_SESSION["userid"])){
+            if($_SESSION["role"]!=="admin"){
+                header("location: staffhome.php");
+                exit();
+            }
+        }
+        else{
+            header("location: login.php");
+            exit();
+        }
+    }
     if($requestUri==="/addstaff.php" ){
         if(isset($_SESSION["userid"])){
             if($_SESSION["role"]!=="admin"){
@@ -16,8 +28,77 @@
             exit();
         }
     }
+    if($requestUri==="/confirmattendance.php" ){
+        if(isset($_SESSION["userid"])){
+            if($_SESSION["role"]!=="admin"){
+                header("location: staffhome.php");
+                exit();
+            }
+        }
+        else{
+            header("location: login.php");
+            exit();
+        }
+    }
+    if($requestUri==="/attendancereport.php" ){
+        if(isset($_SESSION["userid"])){
+            if($_SESSION["role"]!=="admin"){
+                header("location: staffhome.php");
+                exit();
+            }
+        }
+        else{
+            header("location: login.php");
+            exit();
+        }
+    }
+
+
+
+    if($requestUri==="/staffhome.php" ){
+        if(isset($_SESSION["userid"])){
+            if($_SESSION["role"]!=="user"){
+                header("location: index.php");
+                exit();
+            }
+        }
+        else{
+            header("location: stafflogin.php");
+            exit();
+        }
+    }
+    if($requestUri==="/applyattendence.php" ){
+        if(isset($_SESSION["userid"])){
+            if($_SESSION["role"]!=="user"){
+                header("location: index.php");
+                exit();
+            }
+        }
+        else{
+            header("location: stafflogin.php");
+            exit();
+        }
+    }
+
+
+
+
+
+
     
     if($requestUri==="/login.php" ){
+        if(isset($_SESSION["userid"])){
+            if($_SESSION["role"]!=="admin"){
+                header("location: adminhome.php");
+                exit();
+            }
+            else{
+                header("location: staffhome.php");
+                exit();
+            }
+        }
+    }    
+    if($requestUri==="/stafflogin.php" ){
         if(isset($_SESSION["userid"])){
             if($_SESSION["role"]!=="admin"){
                 header("location: adminhome.php");

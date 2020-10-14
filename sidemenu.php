@@ -1,10 +1,10 @@
 
 
-        <nav class="col-md-2 d-none d-md-block bg-light sidebar">
-          <div class="sidebar-sticky">
-            <ul class="nav flex-column"> 
               <?php
                 if(isset($_SESSION["userid"])){
+        echo '<nav class="col-md-2 d-none d-md-block bg-light sidebar">';
+        echo '<div class="sidebar-sticky">';
+        echo '<ul class="nav flex-column"> ';
                   if($_SESSION["role"]==='admin'){
                     echo "<li class='nav-item'>";
                     echo "  <a class='nav-link active' href='adminhome.php'>";
@@ -40,14 +40,14 @@
                     echo "</li>";
                   }
                 }
-                else{
-                  echo "<li class='nav-item'>";
-                  echo "  <a class='nav-link active' href='index.php'>";
-                  echo "    Home";
-                  echo "  </a>";
-                  echo "</li>";
-                }
+                // else{
+                //   echo "<li class='nav-item'>";
+                //   echo "  <a class='nav-link active' href='index.php'>";
+                //   echo "    Home";
+                //   echo "  </a>";
+                //   echo "</li>";
+                // }
+                echo '  </ul>';
+                echo ' </div>';
+                echo '</nav>';
               ?>
-            </ul>
-          </div>
-        </nav>
